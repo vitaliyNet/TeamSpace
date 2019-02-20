@@ -11,7 +11,7 @@ namespace TeamSpace.Controllers
     public class WorksController : Controller
     {
         // GET: Works
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public WorksController()
         {

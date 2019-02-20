@@ -1,9 +1,9 @@
 ﻿@model TeamSpace.ViewModel.WorkFormViewModel
 @{
-    ViewBag.Title = "title";
+  //  ViewBag.Title = "title";
 }
 
-<h2>Create working task title</h2>
+<h2>Add a task</h2>
 
 <form>
     <div class="form-group">
@@ -25,4 +25,6 @@
         @Html.LabelFor(m => m.TaskName)
         @Html.DropDownListFor(m => m.TaskName, new SelectList(Model.TaskNames, "Id", "Name"), "", new { @class = "form-control" })
     </div>
+    
+    <button type="submit" class="btn btn-primary">Save</button>
 </form>
