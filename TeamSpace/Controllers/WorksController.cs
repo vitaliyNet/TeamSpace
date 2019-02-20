@@ -39,7 +39,7 @@ namespace TeamSpace.Controllers
             {
                 TeamLeadId = User.Identity.GetUserId(),
                 Location = model.Location,
-                DateTime = DateTime.Parse(string.Format("{0} {1}", model.Date, model.Time)),
+                DateTime = model.DateTime,
                 TaskNameId = model.TaskName
             };
 

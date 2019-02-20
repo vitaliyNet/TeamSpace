@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TeamSpace.Models;
 
 namespace TeamSpace.ViewModel
@@ -10,5 +11,12 @@ namespace TeamSpace.ViewModel
         public string Time { get; set; }
         public int TaskName { get; set; }
         public IEnumerable<TaskName> TaskNames { get; set; }
+
+        public DateTime DateTime
+        {
+            get { return DateTime.Parse(string.Format("{0} {1}", Date, Time)); }
+        }
+
+      
     }
 }
