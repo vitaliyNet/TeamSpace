@@ -1,0 +1,28 @@
+﻿@model TeamSpace.ViewModel.WorkFormViewModel
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Create working task title</h2>
+
+<form>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Location)
+        @Html.TextBoxFor(m => m.Location, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Date)
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Time)
+        @Html.TextBoxFor(m => m.Time, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.TaskName)
+        @Html.DropDownListFor(m => m.TaskName, new SelectList(Model.TaskNames, "Id", "Name"), "", new { @class = "form-control" })
+    </div>
+</form>
