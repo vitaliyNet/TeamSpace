@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201902201005041_InitialModel.Designer.cs">
       <DependentUpon>201902201005041_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902201013312_PopulateTaskData.cs" />
+    <Compile Include="Migrations\201902201013312_PopulateTaskData.Designer.cs">
+      <DependentUpon>201902201013312_PopulateTaskData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -200,6 +204,10 @@
     <Compile Include="ViewModel\WorkFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-TeamSpace-20190220114033.mdf" />
+    <Content Include="App_Data\aspnet-TeamSpace-20190220114033_log.ldf">
+      <DependentUpon>aspnet-TeamSpace-20190220114033.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -257,9 +265,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Works\Create.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902201005041_InitialModel.resx">
       <DependentUpon>201902201005041_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902201013312_PopulateTaskData.resx">
+      <DependentUpon>201902201013312_PopulateTaskData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
