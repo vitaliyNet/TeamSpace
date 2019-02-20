@@ -35,15 +35,12 @@ namespace TeamSpace.Controllers
         [HttpPost]
         public ActionResult Create(WorkFormViewModel model)
         {
-            var user = User.Identity.GetUserId();
-            var teamLead = _context.Users.Single(u => u.Id == user);
-            var taskName = _context.TaskNames.Single(t => t.Id == model.TaskName);
             var work = new Work()
             {
-                TeamLead = teamLead,
+                TeamLeadId = User.Identity.GetUserId(),
                 Location = model.Location,
                 DateTime = DateTime.Parse(string.Format("{0} {1}", model.Date, model.Time)),
-                TaskName = taskName
+                TaskNameId = model.TaskName
             };
 
             _context.Works.Add(work);

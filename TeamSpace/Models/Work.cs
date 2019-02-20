@@ -10,8 +10,10 @@ namespace TeamSpace.Models
     {
         public int Id { get; set; }
 
-        [Required]
         public ApplicationUser TeamLead { get; set; }
+
+        [Required]
+        public string TeamLeadId { get; set; }
 
         public DateTime DateTime { get; set; } //when its gonna happend
 
@@ -19,7 +21,9 @@ namespace TeamSpace.Models
         [StringLength(255)]
         public string Location { get; set; }
 
-        [Required]
         public TaskName TaskName { get; set; }
+
+        [Required]
+        public int TaskNameId { get; set; }
     }
 }

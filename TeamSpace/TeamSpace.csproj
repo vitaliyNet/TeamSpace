@@ -196,6 +196,10 @@
     <Compile Include="Migrations\201902201251392_createDownOfData.Designer.cs">
       <DependentUpon>201902201251392_createDownOfData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902201540251_FkAdding.cs" />
+    <Compile Include="Migrations\201902201540251_FkAdding.Designer.cs">
+      <DependentUpon>201902201540251_FkAdding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -295,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902201251392_createDownOfData.resx">
       <DependentUpon>201902201251392_createDownOfData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902201540251_FkAdding.resx">
+      <DependentUpon>201902201540251_FkAdding.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
