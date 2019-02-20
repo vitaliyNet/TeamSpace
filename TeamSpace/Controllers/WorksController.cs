@@ -26,7 +26,7 @@ namespace TeamSpace.Controllers
         {
             var viewModel = new WorkFormViewModel()
             {
-                TaskNames = _context.TaskNames.ToList()
+                TaskNames = _context.TaskNames.ToList()  // avoid null reference exception cause taskNames not populated
             };
             return View(viewModel);
         }
@@ -35,11 +35,17 @@ namespace TeamSpace.Controllers
         [HttpPost]
         public ActionResult Create(WorkFormViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                model.TaskNames = _context.TaskNames.ToList(); // avoid null reference exception cause taskNames not populated
+                return View("Create", model);
+            }
+
             var work = new Work()
             {
                 TeamLeadId = User.Identity.GetUserId(),
                 Location = model.Location,
-                DateTime = model.DateTime,
+                DateTime = model.GetDateTime(),
                 TaskNameId = model.TaskName
             };
 
