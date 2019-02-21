@@ -11,9 +11,11 @@ namespace TeamSpace.ViewModel
         public string Location { get; set; }
 
         [Required]
+        [ProperDate]
         public string Date { get; set; }
 
         [Required]
+        [ProperTime]
         public string Time { get; set; }
 
         [Required]

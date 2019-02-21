@@ -209,6 +209,8 @@
     <Compile Include="Models\Work.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\ProperDate.cs" />
+    <Compile Include="ViewModel\ProperTime.cs" />
     <Compile Include="ViewModel\WorkFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
